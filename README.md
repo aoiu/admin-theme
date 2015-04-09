@@ -1,3 +1,3 @@
 > Admin Themes
 
-- [default](tree/default)
+- [default](../../tree/default)
