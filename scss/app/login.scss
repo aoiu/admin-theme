@@ -1,7 +1,7 @@
-@import "theme";
-@import "components/form";
-@import "components/dialog";
-@import "components/validator";
+@import "../mod/theme";
+@import "../mod/components/form";
+@import "../mod/components/dialog";
+@import "../mod/components/validator";
 
 #main {
   float: none;

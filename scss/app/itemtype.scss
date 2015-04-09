@@ -1,0 +1,35 @@
+@import "../mod/theme";
+@import "../mod/components/grid";
+@import "../mod/components/form";
+@import "../mod/components/form-grid";
+@import "../mod/components/form-search";
+@import "../mod/components/pagination";
+@import "../mod/components/dialog";
+@import "../mod/components/select";
+@import "../mod/components/upload";
+// @import "../mod/components/calendar";
+@import "../mod/components/validator";
+
+
+.ui-grid-view {
+  padding: 10px;
+  text-align: left;
+}
+
+.ui-grid-view .todo {
+  color: red;
+}
+
+.ui-grid-view dt {
+  float: left;
+  clear: left;
+}
+
+.ui-grid-view dt:after {
+  content: '：';
+}
+
+.ui-grid-view dd {
+  float: left;
+  clear: right;
+}
