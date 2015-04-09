@@ -1,0 +1,19 @@
+//error-tip
+.ui-form-explain {
+  // position: absolute;
+  // right: 105px;
+  // top: -37px;
+  float: right;
+  margin: -27px 7px 0 0;
+}
+
+.ui-form-item-error {
+  .ui-form-input,
+  .ui-form-textarea {
+    border-color: $red;
+  }
+
+  .ui-form-explain {
+    color: $red;
+  }
+}

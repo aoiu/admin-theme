@@ -1,0 +1,91 @@
+.ui-dialog {
+  background-color: #fff;
+  border-radius: 6px;
+  position: relative;
+  -webkit-user-select: none;
+  box-shadow: 0 1px rem(1) darken($white, 50);
+  min-width: rem(30);
+}
+
+.ui-dialog-close {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  top: 0;
+  right: 0;
+  margin-top: -16px;
+  margin-right: -16px;
+  text-indent: -9999px;
+  // background: sprite-url($icon) no-repeat 100% 7px;
+  background: sprite($icon, close);
+  background-repeat: no-repeat;
+  background-size: 'cover';
+}
+
+.ui-dialog-content {
+  text-align: center;
+}
+
+.ui-dialog-error {
+  .ui-dialog-content {
+    padding: rem(3);
+    // color: $red_color;
+  }
+}
+
+.ui-dialog-head {
+  height: rem(4.2);
+  color: darken($white, 50);
+  font-size: rem(1.6);
+  line-height: rem(4.2);
+  border-bottom: 1px solid darken($white, 50);
+}
+
+.ui-dialog-main{
+  // padding: rem(1);
+}
+
+.ui-dialog-message{
+  padding: rem(2);
+  font-size: rem(1.6);
+}
+
+.ui-dialog-foot {
+  padding: 0 rem(2) rem(2);
+  text-align: center;
+}
+
+
+.ui-dialog-confirm,
+.ui-dialog-cancel {
+  @include inline-block();
+}
+
+a.ui-dialog-button {
+  @include inline-block();
+  cursor: pointer;
+  margin: 0;
+  padding: rem(0.5) rem(3);
+  height: rem(2.2);
+  line-height: rem(2.2);
+  color: $white;
+  background-color: $light_blue;
+  border: none;
+  @include border-radius(16px);
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken($light_blue, 10);
+  }
+}
+
+.ui-dialog-cancel {
+  a.ui-dialog-button {
+    background-color: lighten(grayscale($light_blue), 10);
+
+    &:hover {
+      background-color: grayscale($light_blue);
+    }
+  }
+}

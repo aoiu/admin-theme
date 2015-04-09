@@ -1,0 +1,95 @@
+.webuploader-element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.ui-upload {
+  position: relative;
+  min-height: 32px;
+
+  label {
+    margin-left: 0;
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+.ui-upload-pick {
+  position: absolute;
+  @include inline-block();
+  cursor: pointer;
+  background-color: lighten($light_blue, 10);
+  line-height: 32px;
+  padding: 0 rem(1);
+  color: $white;
+  text-align: center;
+  // @include border-radius(rem(0.3));
+  overflow: hidden;
+  // box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: $light_blue;
+  }
+}
+
+.ui-upload-queue {
+  position: relative;
+  border: 1px solid lighten($black, 66);
+  @include clearfix();
+  margin-bottom: rem(0.5);
+  padding: rem(0.5) 0 0 rem(0.5);
+
+  &:empty {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  .ui-upload-file {
+    float: left;
+    margin: 0 rem(0.5) rem(0.5) 0;
+  }
+}
+
+.ui-upload-file {
+  // background-color: darken($white, 10);
+  border: 1px solid darken($white, 10);
+  // @include border-radius(rem(0.4));
+  position: relative;
+
+  &:hover {
+    .ui-upload-file-buttons {
+      display: block;
+    }
+  }
+
+  img {
+    position: relative;
+    @include inline-block();
+  }
+}
+
+.ui-upload-file-buttons {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  display: none;
+}
+
+.ui-upload-file-remove {
+  float: right;
+  cursor: pointer;
+  width: sprite-width($icon, remove);
+  height: sprite-width($icon, remove);
+  background: sprite($icon, remove);
+  background-repeat: no-repeat;
+  background-size: 'cover';
+}
+
+.ui-upload-message {
+  float: right;
+  margin: 5px 7px 0 0;
+  color: $red;
+}
