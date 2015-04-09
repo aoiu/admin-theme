@@ -1,4 +1,3 @@
-HERE
-IS
-DEFAULT
-THEME
+> Admin Themes
+
+- [default](tree/default)
