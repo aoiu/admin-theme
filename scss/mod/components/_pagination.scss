@@ -19,7 +19,17 @@
     font-weight: bold;
   }
 
+  [disabled] {
+    color: darken($white, 20);
+    cursor: default;
+
+    &:hover {
+      background: none;
+    }
+  }
+
   .current {
+    cursor: default;
     background-color: darken($white, 10);
 
     &:hover {
