@@ -1,0 +1,167 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "var";
+@import "util";
+
+@import "reset";
+
+html {
+  font: rem(1.4) Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  font: #{rem(1.4)}/1.5 Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
+  background: $light_sky url($image_url + "bg.jpg") repeat-x;
+
+  ::-webkit-scrollbar {
+    width: rem(0.8);
+    height: rem(0.8);
+    background-color: $scrollbar_color;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $scrollbar_thumb_color;
+  }
+  ::-webkit-scrollbar, ::-webkit-scrollbar-thumb {
+    @include border-radius($border_radius);
+  }
+  ::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+  }
+}
+
+input, textarea, keygen, select, button {
+  font: #{rem(1.4)}/1.5 Tahoma, Arial, Helvetica, "Microsoft YaHei", "宋体", sans-serif;
+}
+
+a {
+
+  &:link {
+    color: lighten($black, 20);
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#header {
+  background-color: $dark_blue;
+
+  .wrapper {
+    margin: 0 auto;
+    width: $body_width;
+    height: rem(4);
+  }
+
+  a, span, em, label {
+    color: $white;
+  }
+
+  h1 {
+    font-size: rem(1.8);
+    line-height: rem(4);
+
+    a {
+      display: block;
+      float: left;
+      padding-left: rem(4);
+      color: darken($white, 15);
+      background: inline-image("nd.png") no-repeat;
+      letter-spacing: rem(0.3);
+    }
+  }
+
+  ul {
+    float: right;
+  }
+
+  li {
+    float: left;
+    margin-left: rem(0.5);
+    line-height: rem(4);
+  }
+
+  .logout {
+    padding: 0 rem(1.5);
+    background-color: $light_green;
+  }
+}
+
+#wrapper {
+  @include pie-clearfix();
+  @include border-radius($border_radius);
+  margin: rem(2) auto 0;
+  width: $body_width;
+  background-color: $white;
+  overflow:hidden;
+}
+
+#main {
+  float: right;
+  padding: rem(1);
+  width: $main_width;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  float: left;
+  background-color: $sidebar_color;
+  width: $sidebar_width;
+  height: 100%;
+  position: relative;
+  padding-bottom: 9999px;
+  margin-bottom: -9999px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem(1);
+    height: 100%;
+    @include box-shadow(inset rgba(darken($white, 50), 0.5) -#{rem(0.5)} 0 rem(1) -#{rem(0.5)});
+  }
+
+  .nav {
+
+    padding: rem(1) 0;
+
+    li {
+      padding: 0 0 rem(0.1);
+    }
+
+    .active {
+      margin-left: -#{rem(0.5)};
+      background-color: $white;
+      border-left: rem(0.5) solid lighten($light_green, 25);
+      @include border-top-left-radius($border_radius);
+      @include border-bottom-left-radius($border_radius);
+      @include box-shadow(rgba(darken($white, 25), 0.5) 0 rem(0.2));
+    }
+
+    a {
+      display: block;
+      padding: rem(0.5) rem(0.5) rem(0.5) rem(2);
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+}
+
+#footer {
+  margin: rem(1) 0;
+  color: lighten($black, 40);
+  text-align: center;
+  font-size: rem(1.2);
+}
+
+@import "icon-sprite";

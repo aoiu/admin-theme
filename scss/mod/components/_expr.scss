@@ -1,0 +1,52 @@
+@import 'compass/utilities';
+
+#expr-selector {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.expr-tabs {
+  border-bottom:1px solid #ddd;
+  height: 35px;
+  .expr-tab {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-left: 15px;
+    color: #ccc;
+    cursor: pointer;
+    float: left;
+    @include inline-block();
+    &.active {
+      color: #333;
+      border-bottom: 3px solid #59C379;
+    }
+  }
+}
+.expr-panels {
+  font-size: 0;
+  margin-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #DCDAD2;
+  border-right-color:transparent;
+  background-color: $white_color;
+  height: 166px;
+  width: 368px;
+  .expr-panel {
+    &.default-face {
+      background: url($image_url +'default-face.png') no-repeat;
+    }
+    &.emoji-face {
+      background: url($image_url +'emoji-face.png') no-repeat;
+    }
+  }
+}
+.expr-option {
+  width: 22px;
+  height: 22px;
+  border: 1px solid transparent;
+  border-right-color:#DCDAD2;
+  border-bottom-color:#DCDAD2;
+  @include inline-block();
+  cursor: pointer;
+}

@@ -1,0 +1,89 @@
+@import "sprite";
+
+.tabs {
+  font-size: 0;
+  letter-spacing: -4px;
+  width: 100%;
+  height: 34px;
+  line-height: 40px;
+  background-color: #363636;
+  color: #fff;
+}
+
+.tab {
+  font-size: 14px;
+  display: inline-block;
+  letter-spacing: normal;
+  width: 50%;
+  cursor: pointer;
+
+  .count {
+    color: #e40000;
+  }
+}
+
+.tab.active {
+  background: sprite($icon, tab-select, 8px, 5px) no-repeat;
+}
+
+$i: 10;
+@while $i > 1 {
+  $m: $i - 1;
+  .level-#{$i} {
+    .each-one {
+
+      margin-left: -(2px+18px*$m);
+    }
+  }
+  $i: $i - 1;
+}
+
+.panel {
+  background-color: #F9F9F9;
+  .sub-others {
+    margin-left: 10px;
+  }
+
+  .each-one {
+    padding: 5px 0;
+    color: #717171;
+    font-size: 12px;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: #f9f9f9;
+    .username {
+      @include inline-block();
+      @include overflow(110px);
+
+    }
+
+    .phone {
+      //      margin-left: 52px;
+      float: right;
+      margin-right: 100px;
+    }
+  }
+}
+
+.panels {
+  .checked, .unchecked {
+    min-height: 180px;
+  }
+
+  .checked.empty {
+    margin: 0;
+    width: 100%;
+    background: url($image_url + 'all-unread.png') no-repeat center center;
+  }
+
+  .unchecked.empty {
+    margin: 0;
+    width: 100%;
+    background: url($image_url + 'all-read.png') no-repeat center center;
+  }
+}
+
+.ui-stat {
+  .ui-dialog-message {
+    padding: 0;
+  }
+}
