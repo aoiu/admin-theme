@@ -1,0 +1,26 @@
+.ui-form-login {
+  width: rem(40);
+  margin: rem(5) auto;
+
+  .ui-form-items {
+    padding: rem(1) 0 0;
+    border: 1px solid lighten($black, 80);
+    @include border-radius(rem(0.5));
+  }
+
+  .ui-form-item {
+    padding-bottom: rem(1);
+    border-bottom: 1px solid lighten($black, 80);
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  .ui-form-buttons,
+  .ui-form-item {
+    padding-left: rem(10);
+  }
+
+}

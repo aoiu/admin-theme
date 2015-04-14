@@ -86,7 +86,7 @@ a {
     line-height: rem(4);
   }
 
-  .logout {
+  .route-logout {
     padding: 0 rem(1.5);
     background-color: $light_green;
   }
@@ -107,6 +107,21 @@ a {
   width: $main_width;
   height: 100%;
   box-sizing: border-box;
+
+  &.loading {
+    &:before {
+      content: 'loading...';
+    }
+  }
+}
+
+.unauthed {
+
+  #main {
+    float: none;
+    width: auto;
+  }
+
 }
 
 #sidebar {
@@ -165,3 +180,4 @@ a {
 }
 
 @import "icon-sprite";
+@import "fileicon-sprite";

@@ -18,7 +18,7 @@
 }
 
 .ui-upload-pick {
-  position: absolute;
+  position: relative;
   @include inline-block();
   cursor: pointer;
   background-color: lighten($light_blue, 10);
@@ -64,11 +64,39 @@
       display: block;
     }
   }
+}
 
-  img {
-    position: relative;
-    @include inline-block();
-  }
+.ui-upload-file-img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+}
+
+.ui-upload-file-box {
+  position: relative;
+  padding-top: 6px;
+  width: 100px;
+  height: 94px;
+  text-align: center;
+}
+
+.ui-upload-file-icon {
+  margin-bottom: 6px;
+  margin-left: 26px;
+  width: 48px;
+  height: 48px;
+}
+
+.ui-upload-file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: rem(2);
+}
+
+.ui-upload-file-size {
+  line-height: rem(2);
 }
 
 .ui-upload-file-buttons {

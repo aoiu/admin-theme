@@ -1,0 +1,22 @@
+.ui-grid-view {
+  padding: 10px;
+  text-align: left;
+}
+
+.ui-grid-view .todo {
+  color: red;
+}
+
+.ui-grid-view dt {
+  float: left;
+  clear: left;
+}
+
+.ui-grid-view dt:after {
+  content: '：';
+}
+
+.ui-grid-view dd {
+  float: left;
+  clear: right;
+}
