@@ -58,17 +58,19 @@
     // @include border-radius(rem(0.6));
   }
 
-}
+  button {
+    cursor: pointer;
+    margin: 0 rem(0.5) 0 0;
+    padding: rem(0.5) rem(1);
+    height: rem(2.2);
+    line-height: rem(1.2);
+    color: darken(grayscale($orange), 10);
+    background-color: lighten(grayscale($orange), 20);
+    border: none;
 
-.header, .footer, .content {
-  .ui-pagination {
-    button {
-      color: inherit;
-      background-color: darken($white, 10);
-
-      &:hover {
-        background-color: darken($white, 20);
-      }
+    &:hover {
+      background-color: lighten(grayscale($orange), 10);
     }
   }
+
 }

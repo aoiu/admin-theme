@@ -9,23 +9,23 @@ $image_url: '/static/theme/default/img/';
 $white: #FFFFFF;
 $black: #000000;
 $red: #DF3B3B;
-$dark_blue: #2D3B45;
+$orange: #E7604A;
+$dark_blue: #293541;
 $light_blue: #0071BD;
 $light_sky: #C0DFEF;
 $light_green: #68BC25;
-// sidebar
-$sidebar_color: #E8EAEF;
+
 // scrollbar
 $scrollbar_color: #ECECEC;
-$scrollbar_thumb_color: #F8B22C;
+$scrollbar_thumb_color: $orange;
 
 // --------------------------------------
 
 /* Sizes */
 
 $base_size: 10px;
-$body_width: 980px;
-$sidebar_width: 220px;
+$header_height: 50px;
+$sidebar_width: 210px;
 $main_width: 760px;
 $border_radius: 4px;
 

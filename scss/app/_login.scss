@@ -1,26 +1,71 @@
-.ui-form-login {
-  width: rem(40);
-  margin: rem(5) auto;
+.unauthed {
+  position: relative;
+  top: 50%;
+  width: rem(30);
+  overflow: hidden;
+  margin: -126px auto 0;
 
-  .ui-form-items {
-    padding: rem(1) 0 0;
-    border: 1px solid lighten($black, 80);
-    @include border-radius(rem(0.5));
+  #header {
+    position: absolute;
+
+    h1 {
+      width: 100%;
+      background-color: $dark_blue;
+    }
+
+    a {
+      padding-left: 0;
+      height: rem(6);
+      line-height: rem(6);
+      text-align: center;
+    }
   }
 
-  .ui-form-item {
-    padding-bottom: rem(1);
-    border-bottom: 1px solid lighten($black, 80);
+  #wrapper {
+    padding-top: rem(6);
+    height: auto;
+  }
 
-    &:last-child {
-      margin-bottom: 0;
-      border-bottom: none;
-    }
+  #main {
+    padding-left: rem(1);
+    height: auto;
+  }
+
+}
+
+#container {
+  &.unauthed {
+    height: auto;
+  }
+}
+
+.ui-form-login {
+  padding: rem(1);
+
+  .ui-form-items {
   }
 
   .ui-form-buttons,
   .ui-form-item {
-    padding-left: rem(10);
+    padding: 0;
+  }
+
+  .ui-form-input {
+    padding: rem(1) rem(1.5);
+    font-size: rem(1.6);
+  }
+
+  .ui-form-button {
+    width: 100%;
+    height: rem(4.4);
+    padding: rem(1) rem(3);
+    font-size: rem(1.8);
+    border-radius: 0;
+  }
+
+  .ui-form-explain {
+    margin: -34px 16px 0 0;
+    font-size: rem(1.6);
   }
 
 }

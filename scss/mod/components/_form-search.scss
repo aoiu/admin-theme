@@ -1,8 +1,4 @@
 .ui-form-search {
-  @include clearfix();
-  margin-bottom: rem(1);
-  padding: rem(1) 0;
-  border-bottom: 1px dotted darken($white, 20);
 
   .ui-form-items {
     @include inline-block();
