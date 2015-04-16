@@ -42,12 +42,6 @@ $ git pull origin default
 
 **第五步**
 
-在 path/to/theme/default/scss/app 中放置业务 scss 文件
+编辑 path/to/theme/default/scss/index.scss
 
-**第六步**
-
-项目的 config.rb 文件应有如下设置
-
-```ruby
-sass_dir = "theme/default/scss/app"
-```
+在 path/to/theme/default/scss/app 中放置其它以“_”开头的业务 scss 文件
