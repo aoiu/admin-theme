@@ -35,19 +35,18 @@
   .wrapper {
     padding-left: $sidebar_width;
     height: $header_height;
-  }
 
-  ul {
-    float: right;
-  }
+    ul {
+      float: right;
+    }
 
-  li {
-    float: left;
-    margin-left: rem(0.5);
-    line-height: $header_height;
+    li {
+      float: left;
+      line-height: $header_height;
 
-    a {
-      display: block;
+      a {
+        display: block;
+      }
     }
   }
 
@@ -58,7 +57,13 @@
       // background-color: fade-out($black, 0.8);
 
       &:hover {
-        // background-color: fade-out($black, 0.4);
+        background-color: fade-out($black, 0.9);
+      }
+    }
+
+    &.active {
+      a {
+        background-color: fade-out($black, 0.9);
       }
     }
   }
@@ -73,6 +78,14 @@
         background-color: fade-out($black, 0.4);
       }
     }
+  }
+
+  .profile {
+    padding: rem(1);
+    min-width: rem(10);
+    color: $white;
+    background-color: fade-out($dark_blue, 0.1);
+    cursor: default;
   }
 }
 
