@@ -1,5 +1,6 @@
 .ui-form {
   // padding: 20px 125px;
+  max-width: rem(80);
 
   select {
     padding: 4px;
@@ -9,7 +10,8 @@
 }
 
 .ui-form-input,
-.ui-form-textarea {
+.ui-form-textarea,
+.ui-form-static {
   display: block;
   border: 1px solid lighten($black, 80);
   padding: 4px 6px;
@@ -31,10 +33,6 @@
   &::-ms-clear {
     display: none;
   }
-
-  // &[required] {
-    // border-color: red;
-  // }
 }
 
 .ui-form-textarea {
