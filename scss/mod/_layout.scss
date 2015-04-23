@@ -170,6 +170,7 @@
 
   .folder-active {
     > a {
+      padding-left: rem(3)-1;
       border-left: 1px solid $orange;
 
       &:after {
