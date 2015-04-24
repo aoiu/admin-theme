@@ -101,6 +101,7 @@
   padding: rem(1) rem(1) rem(1) $sidebar_width + rem(1);
   height: 100%;
   overflow: auto;
+  box-sizing: border-box;
 
   &.route-loading {
     &:before {
