@@ -111,7 +111,6 @@
 }
 
 #sidebar {
-  display: none;
   position: absolute;
   left: 0;
   top: $header_height;
@@ -190,7 +189,12 @@
       background-color: fade-out($black, 0.9);
     }
   }
+}
 
+.unauthed {
+  #sidebar {
+    display: none;
+  }
 }
 
 #footer {
