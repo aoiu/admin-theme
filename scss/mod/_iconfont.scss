@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1429759957_54683.eot');
+  src: url('//at.alicdn.com/t/font_1430634641_8722582.eot');
   /* IE9*/
 
-  src: url('//at.alicdn.com/t/font_1429759957_54683.eot?#iefix') format('embedded-opentype'),
+  src: url('//at.alicdn.com/t/font_1430634641_8722582.eot?#iefix') format('embedded-opentype'),
   /* IE6-IE8 */
 
-  url('//at.alicdn.com/t/font_1429759957_54683.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1430634641_8722582.woff') format('woff'),
   /* chrome、firefox */
 
-  url('//at.alicdn.com/t/font_1429759957_54683.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1430634641_8722582.ttf') format('truetype'),
   /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
 
-  url('//at.alicdn.com/t/font_1429759957_54683.svg#iconfont') format('svg');
+  url('//at.alicdn.com/t/font_1430634641_8722582.svg#iconfont') format('svg');
   /* iOS 4.1- */
 }
 
@@ -58,5 +58,23 @@
 .iconfont-config {
   &:before {
     content: '\e60a';
+  }
+}
+
+.iconfont-add {
+  &:before {
+    content: '\e618';
+  }
+}
+
+.iconfont-del {
+  &:before {
+    content: '\e61e';
+  }
+}
+
+.iconfont-edit {
+  &:before {
+    content: '\e623';
   }
 }

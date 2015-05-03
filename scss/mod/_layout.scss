@@ -111,7 +111,6 @@
 }
 
 #sidebar {
-  display: none;
   position: absolute;
   left: 0;
   top: $header_height;
@@ -191,6 +190,12 @@
     }
   }
 
+}
+
+.unauthed {
+  #sidebar {
+    display: none;
+  }
 }
 
 #footer {
