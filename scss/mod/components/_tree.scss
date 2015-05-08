@@ -65,15 +65,17 @@
         border: 1px solid darken($white, 30);
       }
     }
-  }
 
-  .has-child {
     &.opened {
       > .toggle {
         &:before {
           content: '－';
         }
       }
+    }
+
+    &:last-child {
+      background-image: none;
     }
   }
 
