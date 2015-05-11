@@ -1,10 +1,10 @@
 @font-face {
   font-family: "editoricon";
-  src: url('//at.alicdn.com/t/font_1431008968_7507715.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/font_1431008968_7507715.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1431008968_7507715.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1431008968_7507715.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1431008968_7507715.svg#editoricon') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/font_1431106786_375856.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1431106786_375856.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1431106786_375856.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1431106786_375856.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1431106786_375856.svg#editoricon') format('svg'); /* iOS 4.1- */
 }
 
 .ui-editor {
@@ -37,9 +37,9 @@
     .icon-italic:before { content: "\e616"; }
     .icon-link:before { content: "\e617"; }
     .icon-dirltr:before { content: "\e618"; }
+    .icon-mark:before { content: "\e614"; }
     .icon-nbsp:before { content: "\e619"; }
     .icon-new:before { content: "\e61a"; }
-    .icon-ok:before { content: "\e61b"; }
     .icon-orderedlist:before { content: "\e61c"; }
     .icon-blockquoteoutdent:before { content: "\e61d"; }
     .icon-pagebreak:before { content: "\e61e"; }
@@ -93,14 +93,21 @@
         font-size: 120%;
       }
 
-      &:hover {
+      &.active {
+        background-color: fade-out($light_blue, 0.9);
         border-bottom-color: $light_blue;
       }
 
-      &.active {
+      &:hover {
+        background-color: fade-out($orange, 0.9);
         border-bottom-color: $orange;
       }
 
+      &[disabled] {
+        cursor: default;
+        background-color: $white;
+        border-bottom-color: darken($white, 20);
+      }
       span {
         display: none;
       }
@@ -112,10 +119,21 @@
     margin: rem(0.5) 0;
   }
 
+  textarea {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: 1px solid darken($white, 20);
+    box-sizing: border-box;
+  }
+
   iframe {
+    display: block;
+    border: 1px solid darken($white, 20);
     width: 100%;
     height: rem(50);
-    border: 1px solid darken($white, 20);
   }
 
   .statusbar {
