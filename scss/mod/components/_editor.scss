@@ -1,3 +1,5 @@
+@import "form-simple";
+
 @font-face {
   font-family: "editoricon";
   src: url('//at.alicdn.com/t/font_1431106786_375856.eot'); /* IE9*/
@@ -5,6 +7,13 @@
   url('//at.alicdn.com/t/font_1431106786_375856.woff') format('woff'), /* chrome、firefox */
   url('//at.alicdn.com/t/font_1431106786_375856.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
   url('//at.alicdn.com/t/font_1431106786_375856.svg#editoricon') format('svg'); /* iOS 4.1- */
+}
+
+.ui-editor-dialog-link {
+  input {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .ui-editor {
