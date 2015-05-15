@@ -1,0 +1,33 @@
+.ui-form-search {
+
+  .ui-form-items {
+    @include inline-block();
+  }
+
+  .ui-form-item {
+    @include inline-block();
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .ui-form-input {
+    @include inline-block();
+    // @include border-radius(rem(0.8));
+  }
+
+  .ui-form-buttons {
+    @include inline-block();
+    padding: 0;
+  }
+
+  .ui-form-button {
+    margin-right: 0;
+  }
+
+  // label {
+  //   width: auto;
+  //   position: static;
+  //   margin: 0;
+  // }
+
+}

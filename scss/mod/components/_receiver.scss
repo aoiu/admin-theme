@@ -1,0 +1,89 @@
+@import "../sprite";
+// receriver
+
+
+.ui-receiver {
+  font-size: $base_size * 1.2;
+  .none-user-tip {
+    background: sprite($icon, 'none-user-tip') no-repeat;
+    //background: url($image_url + 'none-user-tip.png') no-repeat 0 0;
+    @extend .img-user-tip;
+  }
+}
+.ui-receiver-content {
+  display: inline;
+}
+.ui-receiver-users {
+  display: inline;
+}
+.ui-receiver-user {
+  @include inline-block();
+  margin: 5px 12px 5px 0px;
+  padding: 3px 8px;
+  color: $black_color;
+  background-color: $selected-user_color;
+  @include border-radius(30px);
+  cursor: pointer;
+  &:hover {
+    .ui-receiver-name {
+      border-right: 1px solid $tip_hover_color;
+    }
+    .ui-receiver-remove {
+      color: $tip_hover_color;
+    }
+  }
+}
+.ui-receiver-name {
+  @include inline-block();
+  padding-right: 5px;
+  @include font-size($base_size * 1.2);
+  border-right: 1px solid $selected-user_border_color;
+}
+.ui-receiver-remove {
+  @include inline-block();
+  margin-left: 6px;
+  color: $tip_color;
+  // background: url($image_url + 'del-user.png') no-repeat 0 0;
+  // @extend .img-del-user;
+}
+.ui-receiver-empty {
+  @include inline-block();
+  color: $tip_color;
+  line-height: 20px;
+  background-color: $white_color;
+  border: 1px solid $normal-tip_color;
+  @include border-radius(10px);
+  margin-right: 19px\9;
+  padding: 0 0 0 10px\9;
+  height: 20px;
+  &:after {
+    position: absolute;
+    margin-top: -1px;
+    content: '';
+    width: 25px;
+    height: 22px;
+    background: sprite($icon, 'radius-arrow') no-repeat;
+    //background: url($image_url + 'radius-arrow.png') no-repeat;
+  }
+}
+:root .ui-receiver-empty {
+  margin-right: 9px;
+  padding: 0 10px;
+}
+.ui-form-item-error {
+  .ui-receiver-empty {
+    border-color: $error-tip_color;
+    &:after {
+      background: sprite($icon, 'radius-arrow-error') no-repeat;
+      //background-image: url($image_url + 'radius-arrow-error.png');
+    }
+  }
+}
+.ui-receiver-trigger {
+  @include inline-block();
+  border: none;
+  cursor: pointer;
+  background: sprite($icon, 'tree-select-btn') no-repeat;
+  //background: url($image_url + 'tree-select-btn.png') no-repeat 0 0;
+  @extend .img-tree-btn;
+}
