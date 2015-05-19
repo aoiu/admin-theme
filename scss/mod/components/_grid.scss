@@ -32,8 +32,9 @@
       background-color: darken($white, 6);
     }
 
-    a {
+    a, span {
       display: inline-block;
+      vertical-align: middle;
       max-width: rem(30);
       overflow: hidden;
       text-overflow: ellipsis;

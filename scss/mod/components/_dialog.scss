@@ -11,23 +11,6 @@
 .ui-dialog-alert,
 .ui-dialog-confirm {
   @include border-radius(0);
-}
-
-.ui-dialog-close {
-  position: absolute;
-  display: block;
-  width: 32px;
-  height: 32px;
-  top: -16px;
-  right: -16px;
-  text-indent: -9999px;
-  background: sprite($icon, close);
-  background-repeat: no-repeat;
-  background-size: 'cover';
-}
-
-.ui-dialog-alert,
-.ui-dialog-confirm {
 
   .ui-dialog-close {
     width: rem(2.2);
@@ -46,6 +29,19 @@
       text-decoration: none;
     }
   }
+}
+
+.ui-dialog-close {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  top: -16px;
+  right: -16px;
+  text-indent: -9999px;
+  background: sprite($icon, close);
+  background-repeat: no-repeat;
+  background-size: 'cover';
 }
 
 .ui-dialog-content {
