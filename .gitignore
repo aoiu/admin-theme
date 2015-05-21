@@ -19,7 +19,5 @@
 css
 img/fileicon-*.png
 img/icon-*.png
-sass/app
-sass/index.scss
 Thumbs.db
 ~*
