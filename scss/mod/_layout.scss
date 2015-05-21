@@ -119,6 +119,8 @@
   background-color: $dark_blue;
   overflow: auto;
   transition: all 0.2s;
+  padding-bottom: 50px;
+  box-sizing: border-box;
 
   a {
     display: block;
